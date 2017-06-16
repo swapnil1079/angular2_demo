@@ -1,0 +1,19 @@
+<form method="POST" [formGroup]="LoginForm" (ngSubmit)="doLogin($event)" >
+  <div class="imgcontainer">
+    <img src="assets/images/flat-avatar.png" alt="Avatar" class="avatar">
+  </div>
+ <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Email" name="email" formControlName="email">
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+
+ <!--    <a [routerLink]="['dashboard', 'home']">Login</a> -->
+    <input type="checkbox" checked="checked"> Remember me
+    <button type="submit">Login</button> 
+ </div>
+</form>
+ <div class="container" style="background-color:#f1f1f1">
+  <span class="psw"> <button type="button" class="cancelbtn"><a [routerLink]="['dashboard', 'home']">Forgot password</a></button></span>
+  </div>

@@ -1,0 +1,9 @@
+DirectoryIndex index.html
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.(jpg|jpeg|png|gif|flv|mpeg|mpg|mp4)$
+RewriteRule ^.*$ index.html [NC,L]
